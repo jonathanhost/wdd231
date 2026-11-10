@@ -1,65 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Florianópolis's Chamber of Commerce Website">
+    <meta name="description" content="Explore the Florianópolis Chamber of Commerce directory to discover local businesses, services, and organizations in Santa Catarina, Brazil.">
     <meta name="author" content="Jonathan de Almeida">
+    <meta property="og:title" content="Florianópolis Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses, services, and organizations in Florianópolis, Santa Catarina, Brazil.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jonathanhost.github.io/WDD231/chamber/directory.html">
+    <meta property="og:image" content="https://jonathanhost.github.io/WDD231/chamber/images/florianopolis-chamber-logo.png">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <script src="./scripts/directory.js" defer></script>
-    <meta property="og:title" content="Florianópolis Chamber of Commerce">
-    <meta property="og:description" content="Discover local businesses and services in Florianópolis, Santa Catarina.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jonathanhost.github.io/WDD231/chamber/directory.html">
-    <meta property="og:image" content="https://jonathanhost.github.io/WDD231/chamber/images/florianopolis-chamber-logo>
     <link rel="icon" href="./images/favicon.ico">
+    <script src="./scripts/directory.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Florianópolis Chamber of Commerce</title>
+    <title>Florianópolis Chamber of Commerce | Business Directory</title>
 </head>
+
 <body>
-  <header>
-   <div class="header-logo">
-    <a href="directory.html">
-        <img src="./images/florianopolis-chamber-logo.png"
-             alt="São José Chamber of Commerce">
-    </a>
-</div>
+    <header>
+        <div class="header-logo">
+            <a href="directory.html">
+                <img src="./images/florianopolis-chamber-logo.png"
+                     alt="Florianópolis Chamber of Commerce logo">
+            </a>
+        </div>
 
-    <button id="menuButton" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
-        ☰
-    </button>
+        <button
+            id="menuButton"
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+            ☰
+        </button>
 
-    <nav id="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="directory.html">Chamber Project</a></li>
-            <li><a href="../final.html">Final Project</a></li>
-        </ul>
-    </nav>
-</header> 
-<main>
-    <section class="hero">
-    <img src="./images/banner-chamber.png"
-         alt="Florianópolis, Santa Catarina, e sua comunidade empresarial">
-</section>
-    <h1>Florianópolis Chamber of Commerce</h1>
-    <button id="grid-button">Grid</button>
-    <button id="list-button">List</button>
-    <div id="members"></div>
+        <nav id="navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" aria-current="page">Chamber Project</a></li>
+                <li><a href="../final.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+       
+        <h1>Florianópolis Chamber of Commerce</h1>
 
-</main>  
+        <div class="view-options">
+            <button id="grid-button" aria-label="Display members in grid view">
+                Grid
+            </button>
 
-<footer>
-    <p>
-    &copy; <span id="currentYear"></span> Jonathan de Almeida | Florianópolis, SC
-</p>
+            <button id="list-button" aria-label="Display members in list view">
+                List
+            </button>
+        </div>
 
-<p>
-    Last Modification: <span id="lastModified"></span>
-</p>
-</footer>
+        <div id="members"></div>
+    </main>
 
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> Jonathan de Almeida |
+            Florianópolis, SC
+        </p>
+
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+    </footer>
 </body>
+</html>
