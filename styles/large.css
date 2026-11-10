@@ -1,0 +1,32 @@
+
+@media screen and (min-width: 769px) {
+    header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        text-align: left;
+        gap: 25px;
+        padding: 0;
+    }
+
+    #content {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
