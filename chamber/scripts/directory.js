@@ -6,65 +6,56 @@ const gridButton = document.querySelector("#grid-button");
 const listButton = document.querySelector("#list-button");
 const content = document.querySelector("#members");
 const currentYear = document.querySelector("#currentYear");
-const lastModified = document.querySelector("#lastModified");
 
 currentYear.textContent = new Date().getFullYear();
-lastModified.textContent = document.lastModified;
+
+const lastModified = document.querySelector("#lastModified");
+
 
 menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
+    navigation.classList.toggle("show");
 
-    menuButton.setAttribute("aria-expanded", isOpen);
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
+    const isExpanded = navigation.classList.contains("show");
 
-    menuButton.textContent = isOpen ? "✕" : "☰";
+    menuButton.setAttribute("aria-expanded", isExpanded);
 });
 
+// Grid view
 gridButton.addEventListener("click", () => {
     content.classList.remove("list-view");
 });
 
+// List view
 listButton.addEventListener("click", () => {
     content.classList.add("list-view");
 });
 
+// Last modified date
+lastModified.textContent = document.lastModified;
+
 async function getMembers() {
-    try {
-        const response = await fetch("./data/members.json");
+    const response = await fetch("./data/members.json");
+    const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        displayMembers(data);
-    } catch (error) {
-        console.error("Error loading members:", error);
-        content.textContent = "Unable to load member information.";
-    }
+    displayMembers(data);
 }
 
 function displayMembers(members) {
+    const content = document.querySelector("#members");
     const membershipLevels = {
-        1: "Member",
-        2: "Silver Member",
-        3: "Gold Member"
-    };
+    1: "Member",
+    2: "Silver Member",
+    3: "Gold Member"
+};
 
     content.innerHTML = members.map(member => `
         <section class="member-card">
+            <img src="./images/${member.image}" alt="${member.name} logo" loading="lazy">
             <h2>${member.name}</h2>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p>
-                <a href="${member.website}" target="_blank" rel="noopener noreferrer">
-                    ${member.website}
-                </a>
-            </p>
-            <p>Membership: ${membershipLevels[member.membership] || "Member"}</p>
+            <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p>Membership: ${membershipLevels[member.membership]}</p>
             <p>Industry: ${member.industry}</p>
         </section>
     `).join("");
