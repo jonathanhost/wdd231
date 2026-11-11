@@ -1,55 +1,83 @@
-/* Small screens - base styles */
 
 body {
-    font-family: roboto, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     color: #222;
     background-color: #f4f4f4;
+    margin: 0;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
     padding: 1rem;
     background-color: #003366;
     color: white;
 }
 
-header img {
-    width: 50px;
-    margin-right: 10px;
+.header-logo img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
 }
 
-header span {
-    font-size: 1.2rem;
-    font-weight: bold;
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
-nav {
+.hamburger:focus-visible {
+    outline: 3px solid #f4a261;
+    outline-offset: 3px;
+}
+
+#navigation {
     display: none;
+    width: 100%;
     background-color: #004080;
 }
 
-nav.show {
+#navigation.open {
     display: block;
 }
 
-nav a {
+#navigation ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation a {
     display: block;
     padding: 1rem;
     color: white;
     text-align: center;
+    text-decoration: none;
 }
 
-nav a:hover {
+#navigation a:hover {
     background-color: #0059b3;
 }
 
-.hamburger {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
+#navigation a.active {
+    background-color: #0059b3;
+    font-weight: bold;
+    border-left: 4px solid #f4a261;
+}
+
+#navigation a:focus-visible {
+    outline: 3px solid #f4a261;
+    outline-offset: -3px;
 }
 
 main {
@@ -70,6 +98,18 @@ h1 {
     border: none;
     background-color: #003366;
     color: white;
+    cursor: pointer;
+}
+
+#grid-button:hover,
+#list-button:hover {
+    background-color: #0059b3;
+}
+
+#grid-button:focus-visible,
+#list-button:focus-visible {
+    outline: 3px solid #f4a261;
+    outline-offset: 3px;
 }
 
 #members {
@@ -79,6 +119,7 @@ h1 {
 }
 
 .member-card {
+    min-width: 0;
     background-color: white;
     border: 1px solid #ccc;
     padding: 1rem;
@@ -86,12 +127,19 @@ h1 {
 }
 
 .member-card img {
+    display: block;
     width: 150px;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto 1rem;
 }
 
 .member-card h2 {
     color: #003366;
+}
+
+.member-card a {
+    overflow-wrap: anywhere;
 }
 
 #members.list-view {
@@ -102,13 +150,19 @@ h1 {
 .list-view .member-card {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     text-align: left;
 }
 
 .list-view .member-card img {
-    width: 100px;
-    margin: 0;
+    display: none;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 footer {
@@ -116,13 +170,4 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-}
-.header-logo img {
-    width: 180px;
-    height: auto;
-}
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
 }

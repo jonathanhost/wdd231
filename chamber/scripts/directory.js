@@ -50,7 +50,6 @@ function displayMembers(members) {
 
     content.innerHTML = members.map(member => `
         <section class="member-card">
-            <img src="./images/${member.image}" alt="${member.name} logo" loading="lazy">
             <h2>${member.name}</h2>
             <p>${member.address}</p>
             <p>${member.phone}</p>

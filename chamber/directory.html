@@ -28,7 +28,7 @@
         <div class="header-logo">
             <a href="directory.html">
                 <img src="./images/florianopolis-chamber-logo.png"
-                     alt="Florianópolis Chamber of Commerce logo">
+                    alt="Florianópolis Chamber of Commerce logo">
             </a>
         </div>
 
@@ -36,15 +36,26 @@
             id="menuButton"
             class="hamburger"
             aria-label="Open navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="navigation">
             ☰
         </button>
 
-        <nav id="navigation">
+        <nav id="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="directory.html" aria-current="page">Chamber Project</a></li>
-                <li><a href="../final.html">Final Project</a></li>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="directory.html"
+                    class="active"
+                    aria-current="page">
+                        Chamber Project
+                    </a>
+                </li>
+                <li>
+                    <a href="../final.html">Final Project</a>
+                </li>
             </ul>
         </nav>
     </header>
