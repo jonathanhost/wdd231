@@ -35,7 +35,7 @@ header {
 }
 
 .hamburger:focus-visible {
-    outline: 3px solid #f4a261;
+    outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
 
@@ -72,11 +72,11 @@ header {
 #navigation a.active {
     background-color: #0059b3;
     font-weight: bold;
-    border-left: 4px solid #f4a261;
+    border-left: 4px solid #ffffff;
 }
 
 #navigation a:focus-visible {
-    outline: 3px solid #f4a261;
+    outline: 3px solid #fdfdfd;
     outline-offset: -3px;
 }
 
@@ -108,7 +108,7 @@ h1 {
 
 #grid-button:focus-visible,
 #list-button:focus-visible {
-    outline: 3px solid #f4a261;
+    outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
 
