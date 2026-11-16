@@ -1,37 +1,14 @@
-
-const menuButton = document.querySelector("#menuButton");
-const navigation = document.querySelector("#navigation");
-
 const gridButton = document.querySelector("#grid-button");
 const listButton = document.querySelector("#list-button");
 const content = document.querySelector("#members");
-const currentYear = document.querySelector("#currentYear");
 
-currentYear.textContent = new Date().getFullYear();
-
-const lastModified = document.querySelector("#lastModified");
-
-
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("show");
-
-    const isExpanded = navigation.classList.contains("show");
-
-    menuButton.setAttribute("aria-expanded", isExpanded);
-});
-
-// Grid view
 gridButton.addEventListener("click", () => {
     content.classList.remove("list-view");
 });
 
-// List view
 listButton.addEventListener("click", () => {
     content.classList.add("list-view");
 });
-
-// Last modified date
-lastModified.textContent = document.lastModified;
 
 async function getMembers() {
     const response = await fetch("./data/members.json");
@@ -62,3 +39,7 @@ function displayMembers(members) {
 }
 
 getMembers();
+
+
+
+

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Florianópolis Chamber of Commerce directory to discover local businesses, services, and organizations in Santa Catarina, Brazil.">
+    <meta name="author" content="Jonathan de Almeida">
+    <meta property="og:title" content="Florianópolis Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses, services, and organizations in Florianópolis, Santa Catarina, Brazil.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jonathanhost.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://jonathanhost.github.io/wdd231/chamber/images/chamber-logo.webp">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Florianópolis Chamber of Commerce | Business Directory</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <a href="directory.html">
+                <img src="./images/chamber-logo.webp"
+                    alt="Florianópolis Chamber of Commerce logo">
+            </a>
+        </div>
+
+        <button
+            id="menuButton"
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation">
+            ☰
+        </button>
+
+        <nav id="navigation" aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="../index.html"
+                    class="active"
+                    aria-current="page">Home</a>
+                    
+                </li>
+                <li>
+                    <a href="directory.html">
+                        Chamber Project
+                    </a>
+                </li>
+                <li>
+                    <a href="../final.html">Final Project</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="hero">
+
+    <img
+        src="./images/chamber-hero.webp"
+        alt="Florianópolis and Hercílio Luz Bridge at sunset"
+        class="hero-image"
+    >
+
+    <div class="hero-content">
+        <h1>Florianópolis Chamber of Commerce</h1>
+
+        <p>
+            Connecting local businesses and strengthening our community.
+        </p>
+
+        <a href="join.html" class="hero-button">
+            Join the Chamber
+        </a>
+    </div>
+
+    
+
+</section>
+<section class="events">
+    <h2>Upcoming Community Events</h2>
+
+    <div class="events-container">
+
+        <article class="event-card">
+            <img src="images/upcoming.webp"
+                 alt="Business professionals networking">
+
+            <div class="event-info">
+                <span class="event-date">November 25, 2026</span>
+                <h3>Business Networking Night</h3>
+
+                <p>
+                    Connect with local entrepreneurs and
+                    discover new business opportunities.
+                </p>
+
+                <a href="#" class="event-link">Learn More</a>
+            </div>
+        </article>
+
+        <article class="event-card">
+            <img src="images/upcoming.webp"
+                 alt="Technology and innovation event">
+
+            <div class="event-info">
+                <span class="event-date">December 3, 2026</span>
+                <h3>Innovation & Technology Forum</h3>
+
+                <p>
+                    Explore new technologies and trends
+                    transforming local businesses.
+                </p>
+
+                <a href="#" class="event-link">Learn More</a>
+            </div>
+        </article>
+
+        <article class="event-card">
+            <img src="images/upcoming.webp"
+                 alt="Local community business event">
+
+            <div class="event-info">
+                <span class="event-date">December 10, 2026</span>
+                <h3>Community Business Expo</h3>
+
+                <p>
+                    Discover local companies, products
+                    and services from our community.
+                </p>
+
+                <a href="#" class="event-link">Learn More</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+<section class="weather">
+    <h2>Florianópolis Weather</h2>
+
+    <div class="weather-container">
+
+        <div class="current-weather">
+            <h3>Current Weather</h3>
+
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather icon">
+
+                <div>
+                    <p id="current-temp">--°C</p>
+                    <p id="weather-description">Loading...</p>
+                </div>
+            </div>
+
+            <p id="weather-location">Florianópolis, Brazil</p>
+        </div>
+
+        <div class="forecast">
+            <h3>3-Day Forecast</h3>
+
+            <div id="forecast-container">
+                <p>Loading forecast...</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="spotlights">
+    <h2>Business Spotlights</h2>
+    <div id="spotlight-container" class="spotlight-container">
+        <p>Loading business spotlights...</p>
+    </div>
+</section>
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> Jonathan de Almeida |
+            Florianópolis, SC
+        </p>
+
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>

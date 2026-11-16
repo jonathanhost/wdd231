@@ -39,6 +39,48 @@
     #members {
         grid-template-columns: repeat(2, 1fr);
     }
+  .hero {
+        height: 550px;
+    }
+
+    .hero-image {
+        object-position: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+        padding: 50px;
+        margin-left: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+     .weather {
+        padding: 50px 5%;
+    }
+
+    .weather h2 {
+        font-size: 2rem;
+    }
+
+    .weather-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .current-weather,
+    .forecast {
+        padding: 30px;
+    }
+    .spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+  
 }
 
 @media only screen and (min-width: 900px) {
@@ -51,6 +93,6 @@
     }
 
     main {
-        padding: 2rem;
+        padding: 0rem;
     }
 }
