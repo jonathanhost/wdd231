@@ -228,19 +228,12 @@ footer {
     font-weight: bold;
 }
 
-/* EVENTS */
 
 .events {
     padding: 30px 15px;
     width: 100%;
 }
 
-.events h2 {
-    text-align: center;
-    color: #003366;
-    font-size: 1.7rem;
-    margin-bottom: 25px;
-}
 
 .events-container {
     display: flex;
@@ -292,15 +285,13 @@ footer {
     border-radius: 5px;
 }
 
-/* WEATHER SECTION */
-
 .weather {
     width: 100%;
     padding: 30px 15px;
     box-sizing: border-box;
 }
 
-.weather h2 {
+h2 {
     text-align: center;
     color: #003366;
     font-size: 1.7rem;
@@ -383,7 +374,6 @@ footer {
     color: #003366;
 }
 
-/* Business Spotlights */
 .spotlights {
     padding: 2rem 1rem;
     text-align: center;

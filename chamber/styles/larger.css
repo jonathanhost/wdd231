@@ -64,9 +64,6 @@
         padding: 50px 5%;
     }
 
-    .weather h2 {
-        font-size: 2rem;
-    }
 
     .weather-container {
         grid-template-columns: 1fr 1fr;
