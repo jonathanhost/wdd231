@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
     <script src="scripts/join.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Florianópolis Chamber of Commerce | Business Directory</title>
+    <title>Florianópolis Chamber of Commerce | Join</title>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
         <div class="header-logo">
             <a href="directory.html">
                 <img src="./images/chamber-logo.webp"
-                    alt="Florianópolis Chamber of Commerce logo">
+                    alt="Florianópolis Chamber of Commerce">
             </a>
         </div>
 
@@ -167,33 +168,25 @@
         <div class="membership-card">
             <h3>NP Membership</h3>
             <p>For nonprofit organizations.</p>
-            <button type="button" onclick="openModal('np-modal')">
-                Learn More
-            </button>
+            <button type="button" data-modal="np-modal">Learn More</button>
         </div>
 
         <div class="membership-card">
             <h3>Bronze Membership</h3>
             <p>Basic benefits for small businesses.</p>
-            <button type="button" onclick="openModal('bronze-modal')">
-                Learn More
-            </button>
+            <button type="button" data-modal="bronze-modal">Learn More</button>
         </div>
 
         <div class="membership-card">
             <h3>Silver Membership</h3>
             <p>Additional benefits and exposure.</p>
-            <button type="button" onclick="openModal('silver-modal')">
-                Learn More
-            </button>
+            <button type="button" data-modal="silver-modal">Learn More</button>
         </div>
 
         <div class="membership-card">
             <h3>Gold Membership</h3>
             <p>Premium benefits for your business.</p>
-            <button type="button" onclick="openModal('gold-modal')">
-                Learn More
-            </button>
+            <button type="button" data-modal="gold-modal">Learn More</button>
         </div>
 
     </div>
@@ -213,9 +206,7 @@
         <li>Business directory listing</li>
         <li>Community announcements</li>
     </ul>
-    <button type="button" onclick="closeModal('np-modal')">
-        Close
-    </button>
+    <button type="button" data-close-modal="np-modal">Close</button>
 </dialog>
 
 
@@ -234,9 +225,7 @@
         <li>Access to business workshops</li>
         <li>Networking opportunities</li>
     </ul>
-    <button type="button" onclick="closeModal('bronze-modal')">
-        Close
-    </button>
+   <button type="button" data-close-modal="bronze-modal">Close</button>
 </dialog>
 
 
@@ -256,9 +245,7 @@
         <li>Discounted event registration</li>
         <li>Priority access to selected workshops</li>
     </ul>
-    <button type="button" onclick="closeModal('silver-modal')">
-        Close
-    </button>
+    <button type="button" data-close-modal="silver-modal">Close</button>
 </dialog>
 
 
@@ -280,9 +267,7 @@
         <li>Exclusive networking events</li>
         <li>Featured business promotions</li>
     </ul>
-    <button type="button" onclick="closeModal('gold-modal')">
-        Close
-    </button>
+    <button type="button" data-close-modal="gold-modal">Close</button>
 </dialog>
 
 
