@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Florianópolis Chamber of Commerce directory to discover local businesses, services, and organizations in Santa Catarina, Brazil.">
+    <meta name="author" content="Jonathan de Almeida">
+    <meta property="og:title" content="Florianópolis Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses, services, and organizations in Florianópolis, Santa Catarina, Brazil.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jonathanhost.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://jonathanhost.github.io/wdd231/chamber/images/chamber-logo.webp">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <script src="scripts/join.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Florianópolis Chamber of Commerce | Business Directory</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <a href="directory.html">
+                <img src="./images/chamber-logo.webp"
+                    alt="Florianópolis Chamber of Commerce logo">
+            </a>
+        </div>
+
+        <button
+            id="menuButton"
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation">
+            ☰
+        </button>
+
+        <nav id="navigation" aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="../index.html"
+                    class="active"
+                    aria-current="page">Home</a>
+                    
+                </li>
+                <li>
+                    <a href="directory.html">
+                        Chamber Project
+                    </a>
+                </li>
+                <li>
+                    <a href="../final.html">Final Project</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Join the Chamber of Commerce</h1>
+
+        <div class="join-container">
+
+            <section class="membership-form">
+                <h2>Membership Application</h2>
+
+                
+<form method="get" action="thankyou.html">
+
+    <label for="first-name">First Name</label>
+    <input
+        type="text"
+        id="first-name"
+        name="first"
+        title="Enter your first name"
+        autocomplete="given-name"
+        required
+    >
+
+    <label for="last-name">Last Name</label>
+    <input
+        type="text"
+        id="last-name"
+        name="last"
+        title="Enter your last name"
+        autocomplete="family-name"
+        required
+    >
+
+    <label for="organization-title">Organizational Title</label>
+    <input
+        type="text"
+        id="organization-title"
+        name="organization-title"
+        title="Enter your organizational title"
+        autocomplete="organization-title"
+        pattern="[A-Za-z\s-]{7,}"
+    >
+
+    <label for="email">Email Address</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        title="Enter a valid email address"
+        autocomplete="email"
+        placeholder="example@email.com"
+        required
+    >
+
+    <label for="phone">Mobile Phone</label>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        title="Enter your mobile phone number"
+        autocomplete="tel"
+        required
+    >
+
+    <label for="organization">Business/Organization Name</label>
+    <input
+        type="text"
+        id="organization"
+        name="organization"
+        title="Enter your business or organization name"
+        autocomplete="organization"
+        required
+    >
+
+    <label for="membership">Membership Level</label>
+    <select id="membership" name="membership" required>
+        <option value="">Select a membership level</option>
+        <option value="NP">NP Membership</option>
+        <option value="Bronze">Bronze Membership</option>
+        <option value="Silver">Silver Membership</option>
+        <option value="Gold">Gold Membership</option>
+    </select>
+
+    <label for="description">Business Description</label>
+    <textarea
+        id="description"
+        name="description"
+        title="Describe your business or organization"
+    ></textarea>
+
+    <input type="hidden" id="timestamp" name="timestamp">
+
+    <button type="submit">Join the Chamber</button>
+
+</form>
+
+
+            </section>
+
+    <section class="membership-levels">
+                <h2>Membership Levels</h2>
+
+                
+    <div class="membership-cards">
+
+        <div class="membership-card">
+            <h3>NP Membership</h3>
+            <p>For nonprofit organizations.</p>
+            <button type="button" onclick="openModal('np-modal')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="membership-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic benefits for small businesses.</p>
+            <button type="button" onclick="openModal('bronze-modal')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="membership-card">
+            <h3>Silver Membership</h3>
+            <p>Additional benefits and exposure.</p>
+            <button type="button" onclick="openModal('silver-modal')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="membership-card">
+            <h3>Gold Membership</h3>
+            <p>Premium benefits for your business.</p>
+            <button type="button" onclick="openModal('gold-modal')">
+                Learn More
+            </button>
+        </div>
+
+    </div>
+
+
+<dialog id="np-modal">
+    <h2>NP Membership</h2>
+    <p><strong>Free Membership</strong></p>
+    <p>
+        Designed for nonprofit organizations that want
+        to connect with the local business community
+        and support community development.
+    </p>
+    <ul>
+        <li>Free Chamber membership</li>
+        <li>Access to community networking events</li>
+        <li>Business directory listing</li>
+        <li>Community announcements</li>
+    </ul>
+    <button type="button" onclick="closeModal('np-modal')">
+        Close
+    </button>
+</dialog>
+
+
+
+<dialog id="bronze-modal">
+    <h2>Bronze Membership</h2>
+    <p><strong>Basic Business Membership</strong></p>
+    <p>
+        A great starting point for small businesses
+        looking to increase visibility and build
+        valuable local connections.
+    </p>
+    <ul>
+        <li>All NP membership benefits</li>
+        <li>Enhanced business directory listing</li>
+        <li>Access to business workshops</li>
+        <li>Networking opportunities</li>
+    </ul>
+    <button type="button" onclick="closeModal('bronze-modal')">
+        Close
+    </button>
+</dialog>
+
+
+
+<dialog id="silver-modal">
+    <h2>Silver Membership</h2>
+    <p><strong>Professional Business Membership</strong></p>
+    <p>
+        Perfect for growing businesses that want
+        greater exposure, stronger connections,
+        and additional promotional opportunities.
+    </p>
+    <ul>
+        <li>All Bronze membership benefits</li>
+        <li>Featured business directory listing</li>
+        <li>Advertising opportunities</li>
+        <li>Discounted event registration</li>
+        <li>Priority access to selected workshops</li>
+    </ul>
+    <button type="button" onclick="closeModal('silver-modal')">
+        Close
+    </button>
+</dialog>
+
+
+
+<dialog id="gold-modal">
+    <h2>Gold Membership</h2>
+    <p><strong>Premium Business Membership</strong></p>
+    <p>
+        Our most comprehensive membership for
+        established businesses seeking maximum
+        visibility, leadership opportunities,
+        and community influence.
+    </p>
+    <ul>
+        <li>All Silver membership benefits</li>
+        <li>Premium business directory placement</li>
+        <li>Homepage spotlight opportunities</li>
+        <li>Priority event sponsorship opportunities</li>
+        <li>Exclusive networking events</li>
+        <li>Featured business promotions</li>
+    </ul>
+    <button type="button" onclick="closeModal('gold-modal')">
+        Close
+    </button>
+</dialog>
+
+
+
+
+ </section>
+
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> Jonathan de Almeida |
+            Florianópolis, SC
+        </p>
+
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>
